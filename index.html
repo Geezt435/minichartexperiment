@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoCap Mini Charts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.2.4/tailwind.min.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    #grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="grid-section" class="w-full p-4"></div>
+  <div id="list-section" class="w-full p-4">
+    <select id="symbol-dropdown" class="bg-gray-700 text-white p-2 rounded w-full">
+      <option value="">Select a Symbol</option>
+      <option value="BTC">BTC</option>
+      <option value="ETH">ETH</option>
+      <option value="XRP">XRP</option>
+      <option value="LTC">LTC</option>
+      <option value="ADA">ADA</option>
+    </select>
+    <button id="add-symbol-btn" class="bg-blue-500 p-2 rounded mt-2 w-full">Add Symbol</button>
+    <ul id="symbol-list" class="mt-4"></ul>
+  </div>
+  <script src="functionality.js"></script>
+</body>
+</html>
